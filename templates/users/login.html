@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Login Page</title>
+    </head>
+    <body>
+        {{error_message}}
+        <br><br>
+        <form action="/users/login" method="POST">
+        
+        <label for="fname">User Name:</label>
+        <input id="fname" type="text" name="fname" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password" required>
+        <br><br><br>
+        <input type="submit">
+        <input type="reset">
+        <a href="{{url_for('users.users_registration')}}"><button>Register</button></a>
+        </form>
+    </body>
